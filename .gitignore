@@ -23,6 +23,7 @@ Project/docx_render/
 tmp/
 assets/slides/
 *_extracted.txt
+ChatGPT Image*.pdf
 *.zip
 
 # Large external course/reference resources
@@ -34,4 +35,3 @@ Thumbs.db
 desktop.ini
 *.swp
 *.swo
-
