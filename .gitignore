@@ -1,0 +1,37 @@
+# Keil MDK build outputs
+Project/Objects/
+Project/Listings/
+Project/docx_render/
+*.axf
+*.hex
+*.o
+*.d
+*.lst
+*.map
+*.lnp
+*.sct
+*.dep
+*.build_log.htm
+*.htm
+
+# Keil user/session files
+*.uvguix.*
+*.uvoptx
+*.scvd
+
+# Generated and temporary files
+tmp/
+assets/slides/
+*_extracted.txt
+*.zip
+
+# Large external course/reference resources
+源码/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
