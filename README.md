@@ -1,49 +1,57 @@
-# 智能坐姿与学习环境监测系统
+# Intelligent-Learning-Assessment-System
 
-本仓库为电子系统设计课程设计项目，基于 STM32F103C8T6、STM32 标准外设库与 Keil MDK 开发，实现坐姿前倾角度监测、环境光照监测、蜂鸣器报警、LED 提醒和旋转编码器菜单设置等功能。
+Coursework project for Electronic System Design. The system is built with
+STM32F103C8T6, the STM32 standard peripheral library, and Keil MDK. It monitors
+seated posture angle and ambient light, then provides OLED display, buzzer alarm,
+LED reminder, and rotary-encoder menu controls.
 
-## 项目结构
+## Repository Layout
 
 ```text
 Project/
-  Project.uvprojx              Keil MDK 工程文件
-  User/main.c                  主程序入口
-  Hardware/                    OLED、MPU6050、ADC、编码器等模块驱动
-  Library/                     STM32F10x 标准外设库
-  Start/                       启动文件与 CMSIS 支持文件
-  System/                      延时等系统辅助模块
-  README.md                    详细接线、编译和测试说明
-  20231492213 宋佳骏.docx      课程设计论文
-  论文插图/                    论文配图
+  Project.uvprojx              Keil MDK project file
+  User/main.c                  Main program
+  Hardware/                    OLED, MPU6050, ADC, encoder and I/O drivers
+  Library/                     STM32F10x standard peripheral library
+  Start/                       Startup files and CMSIS support
+  System/                      Delay and system helper modules
+  README.md                    Detailed wiring, build and test guide
+  20231492213 宋佳骏.docx      Coursework report
+  论文插图/                    Report figures
 tools/
-  build_course_paper.py        论文生成辅助脚本
-答辩ppt.pptx                   答辩演示文稿
+  build_course_paper.py        Report generation helper script
+答辩ppt.pptx                   Defense presentation
 ```
 
-## 快速使用
+## Quick Start
 
-1. 安装 Keil MDK 5 和 STM32F1xx Device Family Pack。
-2. 使用 Keil 打开 `Project/Project.uvprojx`。
-3. 选择 `Target 1` 后执行 Rebuild。
-4. 通过 ST-Link 将生成的程序下载到 STM32F103C8T6 开发板。
+1. Install Keil MDK 5 and the STM32F1xx Device Family Pack.
+2. Open `Project/Project.uvprojx` in Keil.
+3. Select `Target 1` and run Rebuild.
+4. Download the generated firmware to the STM32F103C8T6 board with ST-Link.
 
-详细硬件接线、模块说明、阈值设置和测试步骤见 [Project/README.md](Project/README.md)。
+For wiring, module notes, threshold settings and testing steps, see
+`Project/README.md`.
 
-## 硬件模块
+## Hardware
 
-- STM32F103C8T6 最小系统板
-- 0.96 寸 I2C OLED 显示屏
-- MPU6050 姿态传感器
-- 光敏电阻模块
-- 旋转编码器模块
-- 有源蜂鸣器模块
-- LED 提醒模块
-- ST-Link 下载器
+- STM32F103C8T6 minimum system board
+- 0.96 inch I2C OLED display
+- MPU6050 motion sensor
+- Photoresistor module
+- Rotary encoder module
+- Active buzzer module
+- LED reminder module
+- ST-Link programmer
 
-## 编译结果
+## Build Status
 
-最近一次 Keil 构建记录见 `Project/build_release.log`。该记录显示工程可完成 Rebuild，结果为 `0 Error(s), 0 Warning(s)`。
+The latest local Keil build log is stored in `Project/build_release.log`. It
+records a successful rebuild with `0 Error(s), 0 Warning(s)`.
 
-## 仓库说明
+## Scope
 
-本仓库只保留课程设计核心工程、文档和必要辅助脚本。课程资料、参考手册、工具安装包、Keil 编译输出和临时生成文件未纳入版本管理。
+This repository keeps the core coursework project, source code, report assets and
+necessary helper scripts. Large course references, tool installers, Keil build
+outputs and temporary generated files are intentionally excluded from version
+control.
